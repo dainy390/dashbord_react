@@ -118,3 +118,24 @@ Start the React app:
 bash
 Copy code
 npm start
+
+
+Usage
+Signup a new user.
+Login with your credentials.
+Access the dashboard:
+Add tasks
+Edit or delete tasks
+
+Search tasks
+Logout using the button on the dashboard.
+
+Tech Stack
+Frontend: React.js, TailwindCSS, Axios, React Router
+Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt
+Deployment Ready: Structured for scaling frontend-backend integration
+Future Improvements
+Dark/light mode toggle
+Task categories & priorities
+Notifications for task updates
+Deploy to Vercel (frontend) and Render/Heroku (backend)
