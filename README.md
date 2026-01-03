@@ -43,7 +43,7 @@ npm start
 
 Postman Collection / API Docs:
 
-Postman collection link: https://www.postman.com/your-collection-link
+Postman collection link: https://www.postman.com/(https://web.postman.co/workspace/7556f732-d0a0-477b-8c7a-4c1a632f3012/collection/38014287-ca0faf26-f450-4f15-85a9-ea9f20775901?action=share&source=copy-link&creator=38014287)
 
 Scalability Notes:
 
