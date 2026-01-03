@@ -1,73 +1,120 @@
-# React Authentication & Dashboard Web App
+# React Dashboard Web App
 
-![Project Screenshot](./screenshots/login-page.png)
-
-This is a **React.js web application** demonstrating **user authentication, protected routes, and a modern dashboard**.  
-It is built as a **frontend-focused internship assignment** with a lightweight Node.js backend for API support.  
-
-The app emphasizes **responsive design, interactivity, and clean code structure**, showcasing your skills as a frontend developer.
+## Overview
+This is a **full-stack dashboard web application** built with **React.js** on the frontend and **Node.js + Express** on the backend, connected to **MongoDB**.  
+It features **user authentication (JWT)**, **CRUD operations on tasks**, and a **responsive, interactive UI** using **TailwindCSS**.
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Authentication
-- User Signup & Login
-- JWT-based authentication (frontend simulation)
-- Logout flow
-- Protected dashboard routes
+### Frontend
+- Built with **React.js**
+- **Responsive design** using TailwindCSS
+- **Authentication flow**:
+  - Signup
+  - Login
+  - Logout
+  - Protected routes (dashboard accessible only after login)
+- **Dashboard**:
+  - User profile display
+  - Add, edit, delete tasks
+  - Search and filter tasks
+- **Interactive UI components**:
+  - Gradient backgrounds
+  - Hover effects
+  - Buttons with animations
+- **State management** with `useState` and `useContext`
 
-### 🖥 Dashboard
-- Shows user profile
-- Add, Edit, Delete Tasks (CRUD)
-- Search & filter tasks
-- Responsive layout with TailwindCSS
-
-### 🎨 UI / UX
-- Attractive Login & Signup pages
-- Modern dashboard with card UI
-- Hover effects, transitions, and interactive buttons
-
-### ⚙ Tech Stack
-- **Frontend:** React.js, TailwindCSS, Axios, React Router
-- **Backend (optional):** Node.js, Express, MongoDB
-- **Other:** LocalStorage (auth token), JWT simulation
-
----
-
-## 📁 Folder Structure
-
-frontend/
-│── src/
-│ ├── components/
-│ │ ├── Layout.jsx
-│ │ └── ProtectedRoute.jsx
-│ ├── context/
-│ │ └── AuthContext.jsx
-│ ├── pages/
-│ │ ├── Dashboard.jsx
-│ │ ├── Login.jsx
-│ │ └── Signup.jsx
-│ ├── App.jsx
-│ ├── index.js
-│ ├── index.css
-
+### Backend
+- Built with **Node.js + Express**
+- **JWT-based authentication**
+- **Password hashing** with `bcrypt`
+- **MongoDB database** for storing users and tasks
+- **API endpoints**:
+  - `POST /api/users/signup` → Register user
+  - `POST /api/users/login` → Login and receive JWT
+  - `GET /api/users/profile` → Fetch user profile
+  - `GET /api/tasks` → Fetch tasks
+  - `POST /api/tasks` → Add task
+  - `PUT /api/tasks/:id` → Update task
+  - `DELETE /api/tasks/:id` → Delete task
 
 ---
 
-## 🛠 Installation & Setup
+## Folder Structure
 
-Follow these steps to run the project locally:
+dashBoard/
+│
+├─ backend/
+│ ├─ config/db.js
+│ ├─ middleware/auth.js
+│ ├─ models/User.js
+│ ├─ models/Task.js
+│ ├─ routes/userRoutes.js
+│ ├─ routes/taskRoutes.js
+│ ├─ server.js
+│ ├─ package.json
+│
+├─ frontend/
+│ ├─ public/index.html
+│ ├─ src/
+│ │ ├─ App.jsx
+│ │ ├─ api.jsx
+│ │ ├─ main.jsx
+│ │ ├─ index.css
+│ │ ├─ index.js
+│ │ ├─ pages/
+│ │ │ ├─ Login.jsx
+│ │ │ ├─ Signup.jsx
+│ │ │ └─ Dashboard.jsx
+│ │ ├─ context/AuthContext.jsx
+│ │ └─ components/
+│ │ ├─ ProtectedRoute.jsx
+│ │ └─ Layout.jsx
+│ ├─ package.json
+│ └─ tailwind.config.js
+│
+└─ README.md
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+## Installation
 
-2️⃣ Navigate into the Project
-cd YOUR-REPO-NAME/frontend
+### Backend
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+Install dependencies:
 
-3️⃣ Install Dependencies
+bash
+Copy code
 npm install
+Create a .env file with:
 
-4️⃣ Start the Development Server
+ini
+Copy code
+MONGO_URI=<Your MongoDB connection string>
+JWT_SECRET=<Your JWT secret>
+PORT=8000
+Start the backend server:
+
+bash
+Copy code
+npm start
+The server will run on http://localhost:8000.
+
+Frontend
+Navigate to the frontend folder:
+
+bash
+Copy code
+cd frontend
+Install dependencies:
+
+bash
+Copy code
+npm install
+Start the React app:
+
+bash
+Copy code
 npm start
